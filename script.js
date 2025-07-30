@@ -34,3 +34,4 @@ function getWeather() {
       result.innerHTML = "Error: " + error.message;
     });
 }
+        
