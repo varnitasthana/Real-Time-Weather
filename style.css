@@ -1,44 +1,72 @@
+/* Full-page gradient background */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0f2c55, #1e3a5f, #3d5a80);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Weather card */
+.weather-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
   text-align: center;
-  padding: 40px;
-  color: #333;
-}
-
-.container {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
   max-width: 400px;
-  margin: auto;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-input {
-  padding: 10px;
-  width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-top: 15px;
+/* Icon above title */
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #0077ff;
+/* App title */
+.weather-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #0f2c55;
+}
+
+/* Input box */
+.weather-container input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Button */
+.weather-container button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #0f2c55;
   color: white;
   border: none;
-  border-radius: 6px;
-  margin-left: 10px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+.weather-container button:hover {
+  background-color: #26446d;
 }
 
-button:hover {
-  background-color: #0055cc;
+/* Weather display and error */
+#weatherInfo, #errorMessage {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
 }
-
-#weatherResult {
-  margin-top: 25px;
-  font-size: 18px;
+#errorMessage {
+  color: red;
 }
- 
