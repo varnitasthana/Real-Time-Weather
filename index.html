@@ -2,17 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>REAL-TIME WEATHER APP</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #003973, #e5e5be);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+
+    #cityInput {
+      padding: 12px 20px;
+      width: 300px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #0a2f5c;
+      color: white;
+      cursor: pointer;
+    }
+
+    #weatherResult {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #animation {
+      height: 200px;
+      width: 100%;
+      margin-top: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-image 0.4s ease-in-out;
+    }
+
+    .clear { background-image: url(https://i.gifer.com/Dg8H.gif'); }
+    .cloudy { background-image: url('https://i.gifer.com/7RtZ.gif'); }
+    .rainy { background-image: url('https://i.gifer.com/VgG.gif'); }
+    .snowy { background-image: url('https://i.gifer.com/Y6c.gif'); }
+    .thunder { background-image: url('https://i.gifer.com/Ba.gif'); }
+    .sunny { background-image: url('https://i.gifer.com/8dO.gif'); }
+
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🌤️ Weather App</h1>
-    <input type="text" id="cityInput" placeholder="Enter city name" />
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="weatherResult"></div>
-  </div>
+
+  <h1>🌤️ REAL-TIME WEATHER APP</h1>
+
+  <input type="text" id="cityInput" placeholder="Enter city name" />
+  <br>
+  <button onclick="getWeather()">Search</button>
+
+  <div id="weatherResult"></div>
+  <div id="animation"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
