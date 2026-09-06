@@ -15,3 +15,4 @@ A responsive weather app that fetches and displays real-time weather data based 
 - CSS
 - JavaScript
 - GitHub Pages for deployment
+
